@@ -1,0 +1,113 @@
+{
+  "ar-intro-01": {
+    "responseTransliteration": "ismī Nīkōlās, tsharrafna.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو اسمَك؟", "transliteration": "shū ismak?"}, "female": {"target": "شو اسمِك؟", "transliteration": "shū ismik?"}}},
+      "formal": {"variants": {"male": {"target": "ما اسمُكَ؟", "transliteration": "mā ismuka?"}, "female": {"target": "ما اسمُكِ؟", "transliteration": "mā ismuki?"}}}
+    }
+  },
+  "ar-intro-02": {
+    "responseTransliteration": "ana min Atlanta, Georgia.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "إنتَ من وين؟", "transliteration": "inta min wēn?"}, "female": {"target": "إنتِ من وين؟", "transliteration": "inti min wēn?"}}},
+      "formal": {"variants": {"male": {"target": "من أين أنتَ؟", "transliteration": "min ayna anta?"}, "female": {"target": "من أين أنتِ؟", "transliteration": "min ayna anti?"}}}
+    }
+  },
+  "ar-intro-03": {
+    "responseTransliteration": "bishtighil bit-tiknolojya w-baʿmil taṭbīqāt.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو بتشتغل؟", "transliteration": "shū btishtighil?"}, "female": {"target": "شو بتشتغلي؟", "transliteration": "shū btishtighli?"}}},
+      "formal": {"variants": {"male": {"target": "ما هو عملُكَ؟", "transliteration": "mā huwa ʿamaluka?"}, "female": {"target": "ما هو عملُكِ؟", "transliteration": "mā huwa ʿamaluki?"}}}
+    }
+  },
+  "ar-intro-04": {
+    "responseTransliteration": "ish-sharaf ilī, in shāʾ Allāh mnshūfak qarīb.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "تشرّفنا بمعرفتَك.", "transliteration": "tsharrafna b-maʿriftak."}, "female": {"target": "تشرّفنا بمعرفتِك.", "transliteration": "tsharrafna b-maʿriftik."}}},
+      "formal": {"variants": {"male": {"target": "سعدت بلقائكَ.", "transliteration": "saʿidtu biliqāʾika."}, "female": {"target": "سعدت بلقائِكِ.", "transliteration": "saʿidtu biliqāʾiki."}}}
+    }
+  },
+  "ar-connect-01": {
+    "responseTransliteration": "w-ana kamān, il-ḥadīth maʿak mrīḥ.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "كتير بنبسط بالحكي مَعَك.", "transliteration": "ktīr b-nibsiṭ bil-ḥaki maʿak."}, "female": {"target": "كتير بنبسط بالحكي مَعِك.", "transliteration": "ktīr b-nibsiṭ bil-ḥaki maʿik."}}},
+      "formal": {"variants": {"male": {"target": "أستمتع كثيراً بالحديث مَعَكَ.", "transliteration": "astamtiʿu kathīran bil-ḥadīthi maʿaka."}, "female": {"target": "أستمتع كثيراً بالحديث مَعَكِ.", "transliteration": "astamtiʿu kathīran bil-ḥadīthi maʿaki."}}}
+    }
+  },
+  "ar-connect-02": {
+    "responseTransliteration": "akīd, baktiblak yāh.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "فيني آخد رقم تلفونَك؟", "transliteration": "fīni ākhod raqam telefōnak?"}, "female": {"target": "فيني آخد رقم تلفونِك؟", "transliteration": "fīni ākhod raqam telefōnik?"}}},
+      "formal": {"variants": {"male": {"target": "هل يمكنني الحصول على رقم هاتفِكَ؟", "transliteration": "hal yumkinunī al-ḥuṣūlu ʿalā raqami hātifika?"}, "female": {"target": "هل يمكنني الحصول على رقم هاتفِكِ؟", "transliteration": "hal yumkinunī al-ḥuṣūlu ʿalā raqami hātifiki?"}}}
+    }
+  },
+  "ar-connect-03": {
+    "responseTransliteration": "ē, is-sabt baʿd iḍ-ḍuhr bnāsibni.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو رأيَك نشرب قهوة هالعطلة؟", "transliteration": "shū raʾyak nishrab ʾahwe hal-ʿuṭle?"}, "female": {"target": "شو رأيِك نشرب قهوة هالعطلة؟", "transliteration": "shū raʾyik nishrab ʾahwe hal-ʿuṭle?"}}},
+      "formal": {"variants": {"male": {"target": "هل ترغب في تناول القهوة في عطلة نهاية الأسبوع؟", "transliteration": "hal targhabu fī tanāwuli al-qahwati fī ʿuṭlati nihāyati al-usbūʿ?"}, "female": {"target": "هل ترغبين في تناول القهوة في عطلة نهاية الأسبوع؟", "transliteration": "hal targhabīna fī tanāwuli al-qahwati fī ʿuṭlati nihāyati al-usbūʿ?"}}}
+    }
+  },
+  "ar-connect-04": {
+    "responseTransliteration": "is-sāʿa sitte bil-ʾahwe illi b-niṣṣ il-balad.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "أي وقت ومحل بناسبَك أكتر؟", "transliteration": "ayy waʾt w-maḥall b-nāsbak aktar?"}, "female": {"target": "أي وقت ومحل بناسبِك أكتر؟", "transliteration": "ayy waʾt w-maḥall b-nāsbik aktar?"}}},
+      "formal": {"variants": {"male": {"target": "ما الوقت والمكان الأنسب لَكَ؟", "transliteration": "mā al-waqtu wal-makānu al-ansabu laka?"}, "female": {"target": "ما الوقت والمكان الأنسب لَكِ؟", "transliteration": "mā al-waqtu wal-makānu al-ansabu laki?"}}}
+    }
+  },
+  "ar-person-01": {
+    "responseTransliteration": "bḥibb irtāḥ w-aṭbukh w-aqḍi waʾt maʿ ʿēlti.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "كيف بتكون عطلة نهاية الأسبوع المثالية إلَك؟", "transliteration": "kīf btikūn ʿuṭlit nihāyet il-usbūʿ il-mithāliyye elak?"}, "female": {"target": "كيف بتكون عطلة نهاية الأسبوع المثالية إلِك؟", "transliteration": "kīf btikūn ʿuṭlit nihāyet il-usbūʿ il-mithāliyye elik?"}}},
+      "formal": {"variants": {"male": {"target": "كيف تبدو عطلة نهاية الأسبوع المثالية لَكَ؟", "transliteration": "kayfa tabdū ʿuṭlatu nihāyati al-usbūʿi al-mithāliyatu laka?"}, "female": {"target": "كيف تبدو عطلة نهاية الأسبوع المثالية لَكِ؟", "transliteration": "kayfa tabdū ʿuṭlatu nihāyati al-usbūʿi al-mithāliyatu laki?"}}}
+    }
+  },
+  "ar-person-02": {
+    "responseTransliteration": "bʾaddir iṣ-ṣarāḥa laʾanna btibni ith-thiʾa.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو أكتر صفة بتقدّرها بالشخص؟", "transliteration": "shū aktar ṣife btʾaddirha bish-shakhṣ?"}, "female": {"target": "شو أكتر صفة بتقدّريها بالشخص؟", "transliteration": "shū aktar ṣife btʾaddriha bish-shakhṣ?"}}},
+      "formal": {"variants": {"male": {"target": "ما الصفة التي تقدّرها أكثر في الشخص؟", "transliteration": "mā aṣ-ṣifatu allatī tuqaddiruhā akthara fī ash-shakhṣ?"}, "female": {"target": "ما الصفة التي تقدّرينها أكثر في الشخص؟", "transliteration": "mā aṣ-ṣifatu allatī tuqaddirīnahā akthara fī ash-shakhṣ?"}}}
+    }
+  },
+  "ar-person-03": {
+    "responseTransliteration": "ʿindi shaghaf bit-tiknolojya wil-mūsīqa w-taʿallum il-lughāt.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو الشي اللي عندَك شغف فيه؟", "transliteration": "shū ish-shī illi ʿindak shaghaf fīh?"}, "female": {"target": "شو الشي اللي عندِك شغف فيه؟", "transliteration": "shū ish-shī illi ʿindik shaghaf fīh?"}}},
+      "formal": {"variants": {"male": {"target": "ما الشيء الذي يثير شغفَكَ؟", "transliteration": "mā ash-shayʾu alladhī yuthīru shaghafaka?"}, "female": {"target": "ما الشيء الذي يثير شغفَكِ؟", "transliteration": "mā ash-shayʾu alladhī yuthīru shaghafaki?"}}}
+    }
+  },
+  "ar-person-04": {
+    "responseTransliteration": "awʾāt bbayyin jiddi, bas ana bas shakhṣ katūm.",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "شو شغلة الناس بيفهموها غلط عَنَّك؟", "transliteration": "shū shaghle in-nās byifhamuha ghalaṭ ʿannak?"}, "female": {"target": "شو شغلة الناس بيفهموها غلط عَنِّك؟", "transliteration": "shū shaghle in-nās byifhamuha ghalaṭ ʿannik?"}}},
+      "formal": {"variants": {"male": {"target": "ما الأمر الذي يسيء الناس فهمه عَنكَ؟", "transliteration": "mā al-amru alladhī yusīʾu an-nāsu fahmahu ʿanka?"}, "female": {"target": "ما الأمر الذي يسيء الناس فهمه عَنكِ؟", "transliteration": "mā al-amru alladhī yusīʾu an-nāsu fahmahu ʿanki?"}}}
+    }
+  },
+  "ar-story-01": {
+    "responseTransliteration": "akīd, shū ṣār?",
+    "registers": {
+      "informal": {"variants": {"male": {"target": "خليني قِلَّك شو صار مبارح.", "transliteration": "khallīni ʾillak shū ṣār mbāriḥ."}, "female": {"target": "خليني قِلِّك شو صار مبارح.", "transliteration": "khallīni ʾillik shū ṣār mbāriḥ."}}},
+      "formal": {"variants": {"male": {"target": "دعني أخبركَ بما حدث أمس.", "transliteration": "daʿnī ukhbiruka bimā ḥadatha ams."}, "female": {"target": "دعني أخبركِ بما حدث أمس.", "transliteration": "daʿnī ukhbiruki bimā ḥadatha ams."}}}
+    }
+  },
+  "ar-story-02": {"responseTransliteration": "w-ēmta tghayyar il-waḍʿ?"},
+  "ar-story-03": {"responseTransliteration": "ʿanjad? shū ʿmilt?"},
+  "ar-story-04": {"responseTransliteration": "mnīḥ innha khilṣit ʿa-khēr."},
+
+  "es-intro-01": {"responseTransliteration": "meh YAH-moh nee-koh-LAHS. MOO-choh GOOS-toh."},
+  "es-intro-02": {"responseTransliteration": "soy deh aht-LAHN-tah, heh-OHR-hyah."},
+  "es-intro-03": {"responseTransliteration": "trah-BAH-hoh ehn tek-noh-loh-HEE-ah ee kohn-STROO-yoh ah-plee-kah-SYOH-nehs."},
+  "es-intro-04": {"responseTransliteration": "ee-gwahl-MEHN-teh. ehs-PEH-roh BEHR-teh PROHN-toh."},
+  "es-connect-01": {"responseTransliteration": "ah mee tahm-BYEHN. lah kohn-behr-sah-SYOHN FLOO-yeh mwee byehn."},
+  "es-connect-02": {"responseTransliteration": "KLAH-roh, teh loh ehs-KREE-boh."},
+  "es-connect-03": {"responseTransliteration": "see, ehl SAH-bah-doh pohr lah TAR-deh meh KEH-dah byehn."},
+  "es-connect-04": {"responseTransliteration": "ah lahs seys ehn ehl kah-FEH dehl SEHN-troh."},
+  "es-person-01": {"responseTransliteration": "meh GOOS-tah dehs-kahn-SAR, koh-see-NAR ee pah-SAR TYEHM-poh kohn mee fah-MEE-lyah."},
+  "es-person-02": {"responseTransliteration": "bah-LOH-roh lah oh-nehs-tee-DAHD POHR-keh KREH-ah kohn-FYAHN-sah."},
+  "es-person-03": {"responseTransliteration": "meh ah-pyah-SOH-nahn lah tek-noh-loh-HEE-ah, lah MOO-see-kah ee ah-prehn-DEHR ee-DYOH-mahs."},
+  "es-person-04": {"responseTransliteration": "ah BEH-sehs pah-REHS-koh SEH-ryoh, PEH-roh seem-pleh-MEHN-teh soy reh-sehr-BAH-doh.", "responseVariants": {"male": {"response": "A veces parezco serio, pero simplemente soy reservado.", "responseTransliteration": "ah BEH-sehs pah-REHS-koh SEH-ryoh, PEH-roh seem-pleh-MEHN-teh soy reh-sehr-BAH-doh."}, "female": {"response": "A veces parezco seria, pero simplemente soy reservada.", "responseTransliteration": "ah BEH-sehs pah-REHS-koh SEH-ryah, PEH-roh seem-pleh-MEHN-teh soy reh-sehr-BAH-dah."}}},
+  "es-story-01": {"responseTransliteration": "KLAH-roh, keh pah-SOH?"},
+  "es-story-02": {"responseTransliteration": "ee KWAHN-doh kahm-BYOH lah see-too-ah-SYOHN?"},
+  "es-story-03": {"responseTransliteration": "noh meh DEE-gahs! keh ee-SEES-teh?"},
+  "es-story-04": {"responseTransliteration": "meh ah-LEH-grah keh tehr-mee-NAH-rah byehn."}
+}

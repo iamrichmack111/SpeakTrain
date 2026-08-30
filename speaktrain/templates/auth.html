@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ 'Create account' if mode == 'register' else 'Sign in' }} · SpeakTrain</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="lesson-card auth-card">
+      <div><span class="mark">ST</span><strong>SpeakTrain</strong></div>
+      <h1>{{ 'Create your local account' if mode == 'register' else 'Welcome back' }}</h1>
+      <p class="note">Your lessons, recordings scores, vocabulary results, XP, and level stay separate from other learners on this computer.</p>
+      {% with messages = get_flashed_messages() %}{% if messages %}<p class="bad">{{ messages[0] }}</p>{% endif %}{% endwith %}
+      <form method="post" class="auth-form">
+        <label>Username<input name="username" required autocomplete="username"></label>
+        <label>Password<input name="password" type="password" required minlength="6" autocomplete="{{ 'new-password' if mode == 'register' else 'current-password' }}"></label>
+        <button class="primary" type="submit">{{ 'Create account' if mode == 'register' else 'Sign in' }}</button>
+      </form>
+      {% if mode == 'register' %}<p>Already registered? <a href="{{ url_for('auth.login') }}">Sign in</a></p>{% else %}<p>New learner? <a href="{{ url_for('auth.register') }}">Create an account</a></p>{% endif %}
+    </section>
+  </main>
+</body>
+</html>

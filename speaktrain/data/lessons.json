@@ -1,0 +1,112 @@
+{
+  "languages": [
+    {
+      "id": "arabic",
+      "name": "Syrian / Levantine Arabic",
+      "speechLang": "ar-SY",
+      "direction": "rtl",
+      "scenarios": [
+        {
+          "id": "household",
+          "name": "Household logistics",
+          "opiPrompts": [
+            "احكيلي عن يومك بالبيت وشو بتعمل عادةً.",
+            "وصّف شو صار مبارح لما ما لقيت حدا بالبيت.",
+            "اتصلت بعيلتك وإنت بالمحل. اسألهم شو بدهم واشرح إمتى رح ترجع.",
+            "في مشكلة بالمطبخ والمي مقطوعة. اشرح المشكلة واقترح حل."
+          ],
+          "phrases": [
+            {"id":"ar-house-01","english":"Where are you?","target":"وَيْنَك؟","transliteration":"wēnak?","note":"The ending changes with the person addressed.","variants":{"male":{"target":"وَيْنَك؟","transliteration":"wēnak?","note":"Speaking to a man: wēnak."},"female":{"target":"وَيْنِك؟","transliteration":"wēnik?","note":"Speaking to a woman: wēnik."}}},
+            {"id":"ar-house-02","english":"Are you at the store?","target":"إِنْتَ بالمحل؟","transliteration":"enta bil-maḥall?","note":"The pronoun changes by gender.","variants":{"male":{"target":"إِنْتَ بالمحل؟","transliteration":"enta bil-maḥall?","note":"Speaking to a man: enta."},"female":{"target":"إِنْتِ بالمحل؟","transliteration":"enti bil-maḥall?","note":"Speaking to a woman: enti."}}},
+            {"id":"ar-house-03","english":"Where is your sister?","target":"وَيْن أُخْتَك؟","transliteration":"wēn ukhtak?","note":"The possessive ending changes by gender.","variants":{"male":{"target":"وَيْن أُخْتَك؟","transliteration":"wēn ukhtak?","note":"Speaking to a man: ukhtak."},"female":{"target":"وَيْن أُخْتِك؟","transliteration":"wēn ukhtik?","note":"Speaking to a woman: ukhtik."}}},
+            {"id":"ar-house-04","english":"Can you bring me cold water, please?","target":"ممكن تجيبلي مي باردة، لو سمحت؟","transliteration":"mumkin tjīb-li mayy bārdeh, law samaḥt?","note":"The verb and polite ending change by gender.","variants":{"male":{"target":"ممكن تجيبلي مي باردة، لو سمحت؟","transliteration":"mumkin tjīb-li mayy bārdeh, law samaḥt?","note":"Speaking to a man: tjīb-li ... samaḥt."},"female":{"target":"ممكن تجيبيلي مي باردة، لو سمحتي؟","transliteration":"mumkin tjībī-li mayy bārdeh, law samaḥti?","note":"Speaking to a woman: tjībī-li ... samaḥti."}}},
+            {"id":"ar-house-05","english":"Call me when you arrive.","target":"دقلي لما توصل.","transliteration":"diʾʾ-li lamma tōṣal.","note":"The command and verb ending change by gender.","variants":{"male":{"target":"دقلي لما توصل.","transliteration":"diʾʾ-li lamma tōṣal.","note":"Speaking to a man: tōṣal."},"female":{"target":"دقّيلي لما توصلي.","transliteration":"diʾʾī-li lamma tōṣali.","note":"Speaking to a woman: tōṣali."}}},
+            {"id":"ar-house-06","english":"We are leaving in ten minutes.","target":"نحنا طالعين بعد عشر دقايق.","transliteration":"niḥna ṭālʿīn baʿd ʿashr daʾāyeʾ.","note":"Useful household announcement."},
+            {"id":"ar-house-07","english":"Did you finish your work?","target":"خلّصت شُغْلَك؟","transliteration":"khallaṣt shughlak?","note":"The possessive ending changes by gender.","variants":{"male":{"target":"خلّصت شُغْلَك؟","transliteration":"khallaṣt shughlak?","note":"Speaking to a man: shughlak."},"female":{"target":"خلّصت شُغْلِك؟","transliteration":"khallaṣt shughlik?","note":"Speaking to a woman: shughlik."}}},
+            {"id":"ar-house-08","english":"Put this in the kitchen.","target":"حط هاد بالمطبخ.","transliteration":"ḥuṭṭ hād bil-maṭbakh.","note":"The command changes by gender.","variants":{"male":{"target":"حط هاد بالمطبخ.","transliteration":"ḥuṭṭ hād bil-maṭbakh.","note":"Command to a man: ḥuṭṭ."},"female":{"target":"حطّي هاد بالمطبخ.","transliteration":"ḥuṭṭi hād bil-maṭbakh.","note":"Command to a woman: ḥuṭṭi."}}},
+            {"id":"ar-house-09","english":"What do you need from the store?","target":"شو بَدَّك من المحل؟","transliteration":"shū baddak min il-maḥall?","note":"The second-person ending changes by gender.","variants":{"male":{"target":"شو بَدَّك من المحل؟","transliteration":"shū baddak min il-maḥall?","note":"Speaking to a man: baddak."},"female":{"target":"شو بِدِّك من المحل؟","transliteration":"shū baddik min il-maḥall?","note":"Speaking to a woman: baddik."}}},
+            {"id":"ar-house-10","english":"I will be home in twenty minutes.","target":"رح كون بالبيت بعد عشرين دقيقة.","transliteration":"raḥ kūn bil-bēt baʿd ʿishrīn daʾīʾa.","note":"Common future construction with raḥ."},
+            {"id":"ar-house-11","english":"Please close the door.","target":"سكّر الباب لو سمحت.","transliteration":"sakkir il-bāb law samaḥt.","note":"The command and polite ending change by gender.","variants":{"male":{"target":"سكّر الباب لو سمحت.","transliteration":"sakkir il-bāb law samaḥt.","note":"Speaking to a man: sakkir ... samaḥt."},"female":{"target":"سكّري الباب لو سمحتي.","transliteration":"sakkri il-bāb law samaḥti.","note":"Speaking to a woman: sakkri ... samaḥti."}}},
+            {"id":"ar-house-12","english":"Who is with you?","target":"مين مَعَك؟","transliteration":"mīn maʿak?","note":"The second-person ending changes by gender.","variants":{"male":{"target":"مين مَعَك؟","transliteration":"mīn maʿak?","note":"Speaking to a man: maʿak."},"female":{"target":"مين مَعِك؟","transliteration":"mīn maʿik?","note":"Speaking to a woman: maʿik."}}}
+          ]
+        },
+        {
+          "id": "romantic",
+          "name": "Romantic and flirtatious",
+          "opiPrompts": [
+            "احكي عن الصفات اللي بتحبها بالشخص التاني.",
+            "احكي عن أول مرة تعرفت فيها على شخص عجبك.",
+            "اعزم شخص على قهوة بطريقة لطيفة ومحترمة.",
+            "الشخص مو متأكد إذا فاضي. اقترح وقت تاني وخليك محترم."
+          ],
+          "phrases": [
+            {"id":"ar-rom-01","english":"You look very handsome / beautiful.","target":"طالع كتير حلو.","transliteration":"ṭāleʿ ktīr ḥilw.","note":"Compliment changes with the person addressed.","variants":{"male":{"target":"طالع كتير حلو.","transliteration":"ṭāleʿ ktīr ḥilw.","note":"Speaking to a man: ṭāleʿ ... ḥilw."},"female":{"target":"طالعة كتير حلوة.","transliteration":"ṭālʿa ktīr ḥilwe.","note":"Speaking to a woman: ṭālʿa ... ḥilwe."}}},
+            {"id":"ar-rom-02","english":"I really enjoy talking with you.","target":"كتير بنبسط لما بحكي مَعَك.","transliteration":"ktīr banbasiṭ lamma baḥki maʿak.","note":"The with-you ending changes.","variants":{"male":{"target":"كتير بنبسط لما بحكي مَعَك.","transliteration":"ktīr banbasiṭ lamma baḥki maʿak.","note":"Speaking to a man: maʿak."},"female":{"target":"كتير بنبسط لما بحكي مَعِك.","transliteration":"ktīr banbasiṭ lamma baḥki maʿik.","note":"Speaking to a woman: maʿik."}}},
+            {"id":"ar-rom-03","english":"Would you like to have coffee with me?","target":"بَدَّك تشرب قهوة معي؟","transliteration":"baddak tishrab ʾahwe maʿi?","note":"A respectful invitation.","variants":{"male":{"target":"بَدَّك تشرب قهوة معي؟","transliteration":"baddak tishrab ʾahwe maʿi?","note":"Speaking to a man: baddak tishrab."},"female":{"target":"بِدِّك تشربي قهوة معي؟","transliteration":"baddik tishrabi ʾahwe maʿi?","note":"Speaking to a woman: baddik tishrabi."}}},
+            {"id":"ar-rom-04","english":"I missed you.","target":"اشتقتلك.","transliteration":"ishtaqtillak.","note":"The final vowel changes.","variants":{"male":{"target":"اشتقتلَك.","transliteration":"ishtaqtillak.","note":"Speaking to a man: -lak."},"female":{"target":"اشتقتلِك.","transliteration":"ishtaqtillik.","note":"Speaking to a woman: -lik."}}},
+            {"id":"ar-rom-05","english":"You make me smile.","target":"إنتَ بتخلّيني ابتسم.","transliteration":"enta btkhallīni ibtasem.","note":"The pronoun changes.","variants":{"male":{"target":"إنتَ بتخلّيني ابتسم.","transliteration":"enta btkhallīni ibtasem.","note":"Speaking to a man: enta."},"female":{"target":"إنتِ بتخلّيني ابتسم.","transliteration":"enti btkhallīni ibtasem.","note":"Speaking to a woman: enti."}}},
+            {"id":"ar-rom-06","english":"Can I call you later?","target":"فيني دقّلَك بعدين؟","transliteration":"fīni daʾʾillak baʿdēn?","note":"Ask permission rather than assuming.","variants":{"male":{"target":"فيني دقّلَك بعدين؟","transliteration":"fīni daʾʾillak baʿdēn?","note":"Speaking to a man: -lak."},"female":{"target":"فيني دقّلِك بعدين؟","transliteration":"fīni daʾʾillik baʿdēn?","note":"Speaking to a woman: -lik."}}},
+            {"id":"ar-rom-07","english":"I really like your energy.","target":"كتير بحب طاقتَك.","transliteration":"ktīr baḥibb ṭāʾtak.","note":"A warm, non-physical compliment.","variants":{"male":{"target":"كتير بحب طاقتَك.","transliteration":"ktīr baḥibb ṭāʾtak.","note":"Speaking to a man: ṭāʾtak."},"female":{"target":"كتير بحب طاقتِك.","transliteration":"ktīr baḥibb ṭāʾtik.","note":"Speaking to a woman: ṭāʾtik."}}},
+            {"id":"ar-rom-08","english":"I would like to see you again.","target":"بدي شوفَك مرة تانية.","transliteration":"baddi shūfak marra tānye.","note":"Direct but respectful.","variants":{"male":{"target":"بدي شوفَك مرة تانية.","transliteration":"baddi shūfak marra tānye.","note":"Speaking to a man: shūfak."},"female":{"target":"بدي شوفِك مرة تانية.","transliteration":"baddi shūfik marra tānye.","note":"Speaking to a woman: shūfik."}}},
+            {"id":"ar-rom-09","english":"Are you free this weekend?","target":"فاضي هالعطلة؟","transliteration":"fāḍi hal-ʿuṭle?","note":"The adjective changes by gender.","variants":{"male":{"target":"فاضي هالعطلة؟","transliteration":"fāḍi hal-ʿuṭle?","note":"Speaking to a man: fāḍi."},"female":{"target":"فاضية هالعطلة؟","transliteration":"fāḍye hal-ʿuṭle?","note":"Speaking to a woman: fāḍye."}}},
+            {"id":"ar-rom-10","english":"I feel very comfortable talking with you.","target":"برتاح كتير بالحكي مَعَك.","transliteration":"bartaḥ ktīr bil-ḥaki maʿak.","note":"Expresses emotional comfort.","variants":{"male":{"target":"برتاح كتير بالحكي مَعَك.","transliteration":"bartaḥ ktīr bil-ḥaki maʿak.","note":"Speaking to a man: maʿak."},"female":{"target":"برتاح كتير بالحكي مَعِك.","transliteration":"bartaḥ ktīr bil-ḥaki maʿik.","note":"Speaking to a woman: maʿik."}}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spanish",
+      "name": "Conversational Spanish",
+      "speechLang": "es-US",
+      "direction": "ltr",
+      "scenarios": [
+        {
+          "id": "appointments",
+          "name": "Appointments and phone calls",
+          "opiPrompts": [
+            "Describa cómo organiza normalmente las citas de su familia.",
+            "Cuénteme qué pasó la última vez que tuvo que cambiar una cita.",
+            "Llame a una clínica, pida una cita y averigüe el precio y la dirección.",
+            "La clínica canceló una cita importante. Explique el problema, proponga una solución y defienda su preferencia."
+          ],
+          "phrases": [
+            {"id":"es-appt-01","english":"I would like to schedule an appointment.","target":"Quisiera programar una cita.","transliteration":"kee-SYEH-rah pro-grah-MAR OO-nah SEE-tah","note":"Polite and broadly useful."},
+            {"id":"es-appt-02","english":"What days do you have available?","target":"¿Qué días tienen disponibles?","transliteration":"keh DEE-ahs TYEH-nen dees-poh-NEE-bles","note":"Uses plural ustedes/formal office address."},
+            {"id":"es-appt-03","english":"Is Tuesday morning available?","target":"¿Está disponible el martes por la mañana?","transliteration":"es-TAH dees-poh-NEE-ble el MAR-tes por lah mah-NYAH-nah","note":"Use tarde for afternoon."},
+            {"id":"es-appt-04","english":"I need to reschedule my appointment.","target":"Necesito cambiar la fecha de mi cita.","transliteration":"neh-seh-SEE-toh kahm-BYAR lah FEH-chah deh mee SEE-tah","note":"Natural alternative to reprogramar."},
+            {"id":"es-appt-05","english":"Could you confirm the address?","target":"¿Podría confirmar la dirección?","transliteration":"poh-DREE-ah kohn-feer-MAR lah dee-rek-SYOHN","note":"Formal and polite."},
+            {"id":"es-appt-06","english":"How much does the appointment cost?","target":"¿Cuánto cuesta la cita?","transliteration":"KWAHN-toh KWEHS-tah lah SEE-tah","note":"Ask this before discussing insurance."},
+            {"id":"es-appt-07","english":"Could you repeat that more slowly?","target":"¿Podría repetirlo más despacio?","transliteration":"poh-DREE-ah reh-peh-TEER-loh mahs des-PAH-syoh","note":"Essential conversation-repair phrase."},
+            {"id":"es-appt-08","english":"The appointment is for my daughter.","target":"La cita es para mi hija.","transliteration":"lah SEE-tah es PAH-rah mee EE-hah","note":"Use hijo for son."},
+            {"id":"es-appt-09","english":"Do I need to bring any documents?","target":"¿Necesito llevar algún documento?","transliteration":"neh-seh-SEE-toh yeh-BAR al-GOON doh-koo-MEN-toh","note":"Useful for medical and government appointments."},
+            {"id":"es-appt-10","english":"I am running about ten minutes late.","target":"Voy a llegar unos diez minutos tarde.","transliteration":"boy ah yeh-GAR OO-nohs dyes mee-NOO-tohs TAR-deh","note":"Call ahead when delayed."},
+            {"id":"es-appt-11","english":"Can you send me a confirmation by text?","target":"¿Puede enviarme una confirmación por mensaje de texto?","transliteration":"PWEH-deh en-BYAR-meh OO-nah kohn-feer-mah-SYOHN por men-SAH-heh deh TEKS-toh","note":"Formal singular address."},
+            {"id":"es-appt-12","english":"Thank you. I will see you on Tuesday.","target":"Gracias. Nos vemos el martes.","transliteration":"GRAH-syahs nohs BEH-mohs el MAR-tes","note":"Natural closing."}
+          ]
+        },
+        {
+          "id": "romantic",
+          "name": "Romantic and flirtatious",
+          "opiPrompts": [
+            "Describe las cualidades que más te atraen de una persona.",
+            "Cuenta cómo conociste a una persona que te gustó.",
+            "Invita a alguien a tomar un café de una manera amable y respetuosa.",
+            "La persona no está segura de estar libre. Propón otro momento sin presionarla."
+          ],
+          "phrases": [
+            {"id":"es-rom-01","english":"You look very handsome / beautiful.","target":"Te ves muy guapo.","transliteration":"teh bes mwee GWAH-poh","note":"The adjective changes with the person addressed.","variants":{"male":{"target":"Te ves muy guapo.","transliteration":"teh bes mwee GWAH-poh","note":"Speaking to a man: guapo."},"female":{"target":"Te ves muy guapa.","transliteration":"teh bes mwee GWAH-pah","note":"Speaking to a woman: guapa."}}},
+            {"id":"es-rom-02","english":"I really enjoy talking with you.","target":"Me encanta hablar contigo.","transliteration":"meh en-KAHN-tah ah-BLAR kohn-TEE-goh","note":"Warm and conversational."},
+            {"id":"es-rom-03","english":"Would you like to have coffee with me?","target":"¿Te gustaría tomar un café conmigo?","transliteration":"teh goo-stah-REE-ah toh-MAR oon kah-FEH kohn-MEE-goh","note":"A polite invitation."},
+            {"id":"es-rom-04","english":"I missed you.","target":"Te extrañé.","transliteration":"teh eks-trah-NYEH","note":"Direct and affectionate."},
+            {"id":"es-rom-05","english":"You make me smile.","target":"Me haces sonreír.","transliteration":"meh AH-ses sohn-reh-EER","note":"A light compliment."},
+            {"id":"es-rom-06","english":"Can I call you later?","target":"¿Puedo llamarte más tarde?","transliteration":"PWEH-doh yah-MAR-teh mahs TAR-deh","note":"Asks permission respectfully."},
+            {"id":"es-rom-07","english":"I really like your energy.","target":"Me encanta tu energía.","transliteration":"meh en-KAHN-tah too eh-nehr-HEE-ah","note":"A non-physical compliment."},
+            {"id":"es-rom-08","english":"I would like to see you again.","target":"Me gustaría volver a verte.","transliteration":"meh goo-stah-REE-ah bol-BER ah BEHR-teh","note":"Clear and respectful."},
+            {"id":"es-rom-09","english":"Are you free this weekend?","target":"¿Estás libre este fin de semana?","transliteration":"es-TAHS LEE-breh ES-teh feen deh seh-MAH-nah","note":"Useful for making plans."},
+            {"id":"es-rom-10","english":"I feel very comfortable with you.","target":"Me siento muy a gusto contigo.","transliteration":"meh SYEN-toh mwee ah GOOS-toh kohn-TEE-goh","note":"Expresses emotional ease."}
+          ]
+        }
+      ]
+    }
+  ]
+}

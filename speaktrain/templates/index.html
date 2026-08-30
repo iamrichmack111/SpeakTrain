@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SpeakTrain</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+  <header>
+    <div><span class="mark">ST</span><strong>SpeakTrain</strong></div>
+    <div class="account-bar"><span id="engineStatus" class="status">Checking speech engine…</span><span id="headerLevel">Level {{ profile.level }} · {{ profile.title }}</span><strong>{{ user.username }}</strong>{% if user.role == 'admin' %}<a href="{{ url_for('main.admin') }}">Admin</a>{% endif %}<a href="{{ url_for('auth.logout') }}">Log out</a></div>
+  </header>
+  <main>
+    <nav class="tabs" aria-label="Practice modes">
+      <button class="tab active" data-view="today">Today</button>
+      <button class="tab" data-view="practice">Phrase practice</button>
+      <button class="tab" data-view="courses">Courses</button>
+      <button class="tab" data-view="opi">OPI simulator</button>
+      <button class="tab" data-view="vocabulary">Vocabulary test</button>
+      <button class="tab" data-view="conjugation">Conjugation drill</button>
+      <button class="tab" data-view="conversation">Conversation</button>
+      <button class="tab" data-view="wordlab">Vocabulary & sentence lab</button>
+      <button class="tab" data-view="progress">Progress</button>
+    </nav>
+
+    <section id="today" class="view active">
+      <div class="hero-dashboard">
+        <div><div class="eyebrow">YOUR ADAPTIVE SESSION</div><h1>Welcome back, {{ user.username }}</h1><p id="todayMessage">Building today’s learning path…</p><button id="startSession" class="hero-action">Start today’s practice →</button></div>
+        <div class="level-orbit"><div class="orbit-ring" id="levelRing"><strong id="dashLevel">{{ profile.level }}</strong><span>LEVEL</span></div><p id="dashXp">{{ profile.xp }} XP</p></div>
+      </div>
+      <div id="todayStats" class="stat-grid dashboard-stats"></div>
+      <div class="dashboard-columns">
+        <article class="lesson-card dashboard-card"><div class="card-heading"><div><div class="eyebrow">SMART QUEUE</div><h2>Practice next</h2></div><span id="dueBadge" class="pulse-badge">0 due</span></div><div id="todayQueue" class="review-queue"></div></article>
+        <article class="lesson-card dashboard-card"><div class="eyebrow">COURSE MASTERY</div><h2>Your learning path</h2><div id="courseProgress" class="course-progress-list"></div></article>
+      </div>
+    </section>
+
+    <section id="practice" class="view">
+      <div class="toolbar">
+        <label>Language<select id="language"></select></label>
+        <label>Course<select id="course"></select></label>
+        <label>Situation<select id="scenario"></select></label>
+        <label>Phrase<select id="phrase"></select></label>
+        <label id="registerWrap">Style<select id="register"><option value="informal">Informal / conversational</option><option value="formal">Formal / professional</option></select></label>
+        <label id="genderWrap">Speaking to<select id="gender"><option value="male">A man</option><option value="female">A woman</option></select></label>
+      </div>
+      <article class="lesson-card">
+        <div class="eyebrow" id="counter"></div>
+        <p id="objective" class="course-objective"></p>
+        <p id="english" class="english"></p>
+        <p id="target" class="target"></p>
+        <p id="transliteration" class="transliteration"></p>
+        <p id="cipher" class="cipher hidden"></p>
+        <p id="note" class="note"></p>
+        <div id="responseBlock" class="response-block hidden"><div class="eyebrow">NATURAL RESPONSE</div><p id="responseEnglish" class="english"></p><p id="response" class="response-target"></p><p id="responseTransliteration" class="transliteration"></p><button id="responseHear">▶ Hear response</button></div>
+        <div class="controls">
+          <button id="play" class="primary">▶ Hear it</button>
+          <button id="cipherToggle">Cipher</button>
+          <button id="record">● Record</button>
+          <button id="next">Next →</button>
+        </div>
+      </article>
+      <section class="manual">
+        <label>If Whisper is unavailable, type what you said
+          <textarea id="manualTranscript" rows="2" placeholder="Enter the target-language sentence here"></textarea>
+        </label>
+        <button id="scoreManual">Score typed response</button>
+      </section>
+      <section id="result" class="result hidden" aria-live="polite"></section>
+    </section>
+
+    <section id="courses" class="view">
+      <article class="lesson-card"><div class="eyebrow">COURSE PATH</div><h1>Build conversation in stages</h1><p class="note">Each course mixes listening, transliteration, formal and informal speech, recall, responses, and vocabulary testing.</p><div id="courseGrid" class="course-grid"></div></article>
+    </section>
+
+    <section id="opi" class="view">
+      <div class="toolbar">
+        <label>Language<select id="opiLanguage"></select></label>
+        <label>Difficulty<select id="opiDifficulty"><option value="0">Warm-up</option><option value="1">Past narration</option><option value="2">Role-play</option><option value="3">Complication/opinion</option></select></label>
+      </div>
+      <article class="lesson-card opi-card">
+        <div class="eyebrow">UNREHEARSED RESPONSE</div>
+        <p id="opiPrompt" class="target"></p>
+        <p class="note">Respond naturally. Continue for 30–90 seconds and support your answer with details.</p>
+        <div class="controls">
+          <button id="opiHear" class="primary">▶ Hear prompt</button>
+          <button id="opiRecord">● Record response</button>
+          <button id="opiNew">New prompt</button>
+        </div>
+      </article>
+      <section class="manual">
+        <label>Manual transcript fallback<textarea id="opiTranscript" rows="4" placeholder="Type your response here when Whisper is unavailable"></textarea></label>
+        <button id="opiManual">Estimate response</button>
+      </section>
+      <section id="opiResult" class="result hidden" aria-live="polite"></section>
+    </section>
+
+    <section id="vocabulary" class="view">
+      <div class="toolbar vocab-toolbar">
+        <label>Language<select id="vocabLanguage"></select></label>
+        <label>Direction<select id="vocabMode"><option value="english_to_target">English → selected language</option><option value="target_to_english">Selected language → English</option><option value="english_to_spanish">Cognate bridge: English → Spanish</option><option value="spanish_to_arabic">Language bridge: Spanish → Arabic</option><option value="arabic_to_spanish">Language bridge: Arabic → Spanish</option></select></label>
+        <button id="vocabNew">New question</button>
+      </div>
+      <article class="lesson-card">
+        <div class="eyebrow">VOCABULARY RECALL</div>
+        <p id="vocabPrompt" class="target"></p>
+        <p id="vocabHint" class="transliteration"></p>
+        <div id="vocabChoices" class="choice-grid"></div>
+        <section id="vocabResult" class="result hidden" aria-live="polite"></section>
+      </article>
+    </section>
+
+    <section id="conjugation" class="view">
+      <article class="lesson-card quiz-stage">
+        <div class="toolbar"><label>Language<select id="conjLanguage"><option value="spanish">Spanish</option><option value="arabic">Syrian Arabic</option></select></label><label>Tense<select id="conjTense"><option value="present">Present</option><option value="past">Past</option></select></label><button id="conjNew">New conjugation</button></div>
+        <div class="eyebrow">CONJUGATION RECALL</div><p id="conjContext" class="english"></p><p id="conjPrompt" class="target"></p><div id="conjChoices" class="choice-grid"></div><section id="conjResult" class="result hidden"></section>
+      </article>
+    </section>
+
+    <section id="conversation" class="view">
+      <article class="lesson-card quiz-stage">
+        <div class="toolbar"><label>Language<select id="conversationLanguage"><option value="spanish">Spanish</option><option value="arabic">Syrian Arabic</option></select></label><button id="conversationNew">New exchange</button></div>
+        <div class="eyebrow" id="conversationScenario">GUIDED CONVERSATION</div><p id="conversationEnglish" class="english"></p><div class="dialogue-bubble incoming"><p id="conversationPrompt" class="target"></p><p id="conversationTransliteration" class="transliteration"></p><button id="conversationHear">▶ Hear prompt</button></div><h3>Choose the most natural response</h3><div id="conversationChoices" class="choice-grid"></div><section id="conversationResult" class="result hidden"></section>
+      </article>
+    </section>
+
+    <section id="wordlab" class="view">
+      <article class="lesson-card">
+        <div class="eyebrow">SEARCHABLE VOCABULARY</div>
+        <h1>English · Spanish · Syrian Arabic</h1>
+        <p class="note">Cognates give you a fast English-to-Spanish entry point. The Arabic column then becomes a meaning bridge, even when the Arabic word is unrelated.</p>
+        <div class="word-filters"><input id="wordSearch" type="search" placeholder="Search any language or transliteration"><select id="wordCategory"><option value="all">All categories</option></select><label class="check-label"><input id="cognatesOnly" type="checkbox"> Cognates only</label></div>
+        <div class="table-scroll"><table><thead><tr><th>English</th><th>Spanish</th><th>Spanish sound</th><th>Syrian Arabic</th><th>Arabic transliteration</th><th>Type</th><th>Transfer note</th></tr></thead><tbody id="wordRows"></tbody></table></div>
+      </article>
+
+      <article class="lesson-card lab-card">
+        <div class="eyebrow">CONJUGATION WORKSHOP</div>
+        <h2>See the pattern before building</h2>
+        <div class="toolbar"><label>Language<select id="builderLanguage"><option value="spanish">Spanish</option><option value="arabic">Syrian Arabic</option></select></label><label>Verb<select id="conjugationVerb"></select></label><label>Tense<select id="conjugationTense"><option value="present">Present</option><option value="past">Past</option></select></label></div>
+        <div id="conjugationTable" class="table-scroll"></div>
+      </article>
+
+      <article class="lesson-card lab-card">
+        <div class="eyebrow">SENTENCE BUILDER</div>
+        <h2>Combine pieces into a natural sentence</h2>
+        <div class="builder-grid">
+          <label>Subject<select id="builderSubject"></select></label>
+          <label>Verb<select id="builderVerb"></select></label>
+          <label>Complement<select id="builderComplement"></select></label>
+          <label>Time<select id="builderTime"></select></label>
+        </div>
+        <div class="builder-options"><label class="check-label"><input id="builderNegative" type="checkbox"> Make it negative</label><label class="check-label"><input id="builderQuestion" type="checkbox"> Make it a question</label></div>
+        <div class="built-sentence"><p id="builtEnglish" class="english"></p><p id="builtTarget" class="target"></p><p id="builtTransliteration" class="transliteration"></p><div class="controls"><button id="builtHear" class="primary">▶ Hear sentence</button><button id="builtCopy">Copy sentence</button></div></div>
+        <p class="note">The builder teaches agreement and word order. Some verb–complement combinations will be grammatically formed but semantically unusual—use that as a prompt to notice which words naturally belong together.</p>
+      </article>
+    </section>
+
+    <section id="progress" class="view">
+      <article class="lesson-card"><h2>Your performance</h2><div class="report-links"><a href="/report/daily" target="_blank">Print daily sheet</a><a href="/report/weekly" target="_blank">Print weekly sheet</a><a href="/report/monthly" target="_blank">Print monthly sheet</a></div><div id="progressTable"></div></article>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

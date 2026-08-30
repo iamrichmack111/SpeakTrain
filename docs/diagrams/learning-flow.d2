@@ -1,0 +1,14 @@
+direction: down
+classes: {
+  step: {style.fill: "#10201a"; style.stroke: "#59e391"; style.font-color: "#f2f7f4"; border-radius: 14}
+}
+today: Today Queue {class: step; icon: ../icons/book.svg}
+attempt: Speaking or Quiz Attempt {class: step; icon: ../icons/microphone.svg}
+score: Recognition + Recall Score {class: step; icon: ../icons/test.svg}
+mastery: Mastery State {class: step; icon: ../icons/database.svg}
+schedule: Next Review {class: step; icon: ../icons/book.svg}
+today -> attempt
+attempt -> score
+score -> mastery: New → Mastered
+mastery -> schedule: 10 min → 30 days
+schedule -> today: when due

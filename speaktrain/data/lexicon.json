@@ -1,0 +1,115 @@
+{
+  "vocabulary": [
+    {"english":"person","spanish":"persona","spanishPronunciation":"pehr-SOH-nah","arabic":"شخص","arabicTransliteration":"shakhṣ","category":"People","partOfSpeech":"noun","cognate":true,"note":"Direct English–Spanish cognate; Arabic uses a distinct root."},
+    {"english":"family","spanish":"familia","spanishPronunciation":"fah-MEE-lyah","arabic":"عيلة","arabicTransliteration":"ʿēle","category":"People","partOfSpeech":"noun","cognate":true,"note":"Everyday Syrian Arabic; MSA: عائلة ʿāʾila."},
+    {"english":"friend","spanish":"amigo / amiga","spanishPronunciation":"ah-MEE-goh / ah-MEE-gah","arabic":"رفيق / رفيقة","arabicTransliteration":"rafīʾ / rafīʾa","category":"People","partOfSpeech":"noun","cognate":false,"note":"Both Spanish and Arabic mark masculine/feminine."},
+    {"english":"sister","spanish":"hermana","spanishPronunciation":"ehr-MAH-nah","arabic":"أخت","arabicTransliteration":"ukht","category":"People","partOfSpeech":"noun","cognate":false,"note":"Useful with possessive endings: ukhtak / ukhtik."},
+    {"english":"client","spanish":"cliente","spanishPronunciation":"klee-EHN-teh","arabic":"زبون / زبونة","arabicTransliteration":"zabūn / zabūne","category":"People","partOfSpeech":"noun","cognate":true,"note":"Spanish cliente is related to English client."},
+    {"english":"appointment","spanish":"cita","spanishPronunciation":"SEE-tah","arabic":"موعد","arabicTransliteration":"mawʿid","category":"Planning","partOfSpeech":"noun","cognate":false,"note":"Used for professional appointments and dates, depending on context."},
+    {"english":"telephone","spanish":"teléfono","spanishPronunciation":"teh-LEH-foh-noh","arabic":"تلفون","arabicTransliteration":"telefōn","category":"Contact","partOfSpeech":"noun","cognate":true,"note":"An international word recognizable across all three languages."},
+    {"english":"message","spanish":"mensaje","spanishPronunciation":"mehn-SAH-heh","arabic":"رسالة","arabicTransliteration":"risāle","category":"Contact","partOfSpeech":"noun","cognate":false,"note":"Syrian pronunciation risāle; MSA risāla."},
+    {"english":"address","spanish":"dirección","spanishPronunciation":"dee-rehk-SYOHN","arabic":"عنوان","arabicTransliteration":"ʿinwān","category":"Contact","partOfSpeech":"noun","cognate":false,"note":"Also useful for delivery and business situations."},
+    {"english":"coffee","spanish":"café","spanishPronunciation":"kah-FEH","arabic":"قهوة","arabicTransliteration":"ʾahwe","category":"Food and dates","partOfSpeech":"noun","cognate":false,"note":"Syrian ʾahwe differs from formal qahwa."},
+    {"english":"water","spanish":"agua","spanishPronunciation":"AH-gwah","arabic":"مي","arabicTransliteration":"mayy","category":"Household","partOfSpeech":"noun","cognate":false,"note":"Formal Arabic: ماء māʾ."},
+    {"english":"store","spanish":"tienda","spanishPronunciation":"TYEHN-dah","arabic":"محل","arabicTransliteration":"maḥall","category":"Places","partOfSpeech":"noun","cognate":false,"note":"Maḥall can mean store, shop, or place in Levantine usage."},
+    {"english":"house","spanish":"casa","spanishPronunciation":"KAH-sah","arabic":"بيت","arabicTransliteration":"bēt","category":"Places","partOfSpeech":"noun","cognate":false,"note":"At home: bil-bēt."},
+    {"english":"restaurant","spanish":"restaurante","spanishPronunciation":"rehs-tow-RAHN-teh","arabic":"مطعم","arabicTransliteration":"maṭʿam","category":"Places","partOfSpeech":"noun","cognate":true,"note":"Clear English–Spanish cognate."},
+    {"english":"center / downtown","spanish":"centro","spanishPronunciation":"SEHN-troh","arabic":"نص البلد","arabicTransliteration":"niṣṣ il-balad","category":"Places","partOfSpeech":"noun phrase","cognate":true,"note":"Spanish centro is a cognate; Syrian Arabic literally says center of town."},
+    {"english":"today","spanish":"hoy","spanishPronunciation":"oy","arabic":"اليوم","arabicTransliteration":"il-yōm","category":"Time","partOfSpeech":"adverb","cognate":false,"note":"Common sentence-ending time expression."},
+    {"english":"tomorrow","spanish":"mañana","spanishPronunciation":"mahn-YAH-nah","arabic":"بكرا","arabicTransliteration":"bukra","category":"Time","partOfSpeech":"adverb","cognate":false,"note":"Mañana can also mean morning; context distinguishes it."},
+    {"english":"yesterday","spanish":"ayer","spanishPronunciation":"ah-YEHR","arabic":"مبارح","arabicTransliteration":"mbāriḥ","category":"Time","partOfSpeech":"adverb","cognate":false,"note":"Formal Arabic: أمس ams."},
+    {"english":"weekend","spanish":"fin de semana","spanishPronunciation":"feen deh seh-MAH-nah","arabic":"عطلة نهاية الأسبوع","arabicTransliteration":"ʿuṭlit nihāyet il-usbūʿ","category":"Time","partOfSpeech":"noun phrase","cognate":false,"note":"A useful phrase bridge rather than a cognate."},
+    {"english":"now","spanish":"ahora","spanishPronunciation":"ah-OH-rah","arabic":"هلّق","arabicTransliteration":"hallaʾ","category":"Time","partOfSpeech":"adverb","cognate":false,"note":"Very common Syrian/Levantine time word."},
+    {"english":"technology","spanish":"tecnología","spanishPronunciation":"tek-noh-loh-HEE-ah","arabic":"تكنولوجيا","arabicTransliteration":"tiknolojya","category":"Interests","partOfSpeech":"noun","cognate":true,"note":"International cognate/loanword across all three languages."},
+    {"english":"music","spanish":"música","spanishPronunciation":"MOO-see-kah","arabic":"موسيقى","arabicTransliteration":"mūsīqa","category":"Interests","partOfSpeech":"noun","cognate":true,"note":"High-transfer international vocabulary."},
+    {"english":"conversation","spanish":"conversación","spanishPronunciation":"kohn-behr-sah-SYOHN","arabic":"حديث","arabicTransliteration":"ḥadīth","category":"Conversation","partOfSpeech":"noun","cognate":true,"note":"English–Spanish cognate; Arabic uses a separate word."},
+    {"english":"important","spanish":"importante","spanishPronunciation":"eem-pohr-TAHN-teh","arabic":"مهم","arabicTransliteration":"muhimm","category":"Descriptions","partOfSpeech":"adjective","cognate":true,"note":"Spanish importante is a transparent cognate."},
+    {"english":"normal","spanish":"normal","spanishPronunciation":"nohr-MAHL","arabic":"طبيعي","arabicTransliteration":"ṭabīʿi","category":"Descriptions","partOfSpeech":"adjective","cognate":true,"note":"Same spelling in English and Spanish."},
+    {"english":"ideal","spanish":"ideal","spanishPronunciation":"ee-deh-AL","arabic":"مثالي / مثالية","arabicTransliteration":"mithāli / mithāliyye","category":"Descriptions","partOfSpeech":"adjective","cognate":true,"note":"Arabic adjective changes with grammatical gender."},
+    {"english":"comfortable","spanish":"cómodo / cómoda","spanishPronunciation":"KOH-moh-doh / KOH-moh-dah","arabic":"مرتاح / مرتاحة","arabicTransliteration":"mirtāḥ / mirtāḥa","category":"Descriptions","partOfSpeech":"adjective","cognate":false,"note":"Both languages mark the speaker's gender."},
+    {"english":"available / free","spanish":"disponible / libre","spanishPronunciation":"dees-poh-NEE-bleh / LEE-breh","arabic":"فاضي / فاضية","arabicTransliteration":"fāḍi / fāḍye","category":"Planning","partOfSpeech":"adjective","cognate":true,"note":"Disponible is an English–Spanish cognate; libre often sounds more natural socially."},
+    {"english":"because","spanish":"porque","spanishPronunciation":"POHR-keh","arabic":"لأنو","arabicTransliteration":"laʾanno","category":"Connectors","partOfSpeech":"conjunction","cognate":false,"note":"Use it to turn a short answer into an explanation."},
+    {"english":"but","spanish":"pero","spanishPronunciation":"PEH-roh","arabic":"بس","arabicTransliteration":"bass","category":"Connectors","partOfSpeech":"conjunction","cognate":false,"note":"Essential for contrasting ideas."},
+    {"english":"then","spanish":"entonces / luego","spanishPronunciation":"ehn-TOHN-sehs / LWEH-goh","arabic":"بعدين","arabicTransliteration":"baʿdēn","category":"Connectors","partOfSpeech":"adverb","cognate":false,"note":"Useful for storytelling sequences."},
+    {"english":"also","spanish":"también","spanishPronunciation":"tahm-BYEHN","arabic":"كمان","arabicTransliteration":"kamān","category":"Connectors","partOfSpeech":"adverb","cognate":false,"note":"Adds another idea naturally."},
+    {"english":"maybe","spanish":"quizás","spanishPronunciation":"kee-SAHS","arabic":"يمكن","arabicTransliteration":"yimkin","category":"Conversation","partOfSpeech":"adverb","cognate":false,"note":"Softens an opinion or plan."},
+    {"english":"of course","spanish":"claro","spanishPronunciation":"KLAH-roh","arabic":"أكيد","arabicTransliteration":"akīd","category":"Conversation","partOfSpeech":"response","cognate":false,"note":"A fast positive response."},
+    {"english":"please","spanish":"por favor","spanishPronunciation":"pohr fah-BOHR","arabic":"لو سمحت","arabicTransliteration":"law samaḥt","category":"Courtesy","partOfSpeech":"expression","cognate":false,"note":"Arabic ending changes in careful speech: samaḥt for a man, samaḥti for a woman."},
+    {"english":"thank you","spanish":"gracias","spanishPronunciation":"GRAH-syahs","arabic":"شكراً","arabicTransliteration":"shukran","category":"Courtesy","partOfSpeech":"expression","cognate":false,"note":"High-frequency courtesy vocabulary."}
+  ],
+  "builders": {
+    "spanish": {
+      "name":"Spanish",
+      "speechLang":"es-ES",
+      "direction":"ltr",
+      "subjects":[
+        {"person":"yo","english":"I","target":"Yo"},{"person":"tu","english":"you (informal)","target":"Tú"},{"person":"usted","english":"you (formal)","target":"Usted"},{"person":"el","english":"he","target":"Él"},{"person":"ella","english":"she","target":"Ella"},{"person":"nosotros","english":"we","target":"Nosotros"}
+      ],
+      "verbs":[
+        {"id":"hablar","english":"speak / talk","infinitive":"hablar","conjugations":{"present":{"yo":"hablo","tu":"hablas","usted":"habla","el":"habla","ella":"habla","nosotros":"hablamos"},"past":{"yo":"hablé","tu":"hablaste","usted":"habló","el":"habló","ella":"habló","nosotros":"hablamos"}}},
+        {"id":"querer","english":"want","infinitive":"querer","conjugations":{"present":{"yo":"quiero","tu":"quieres","usted":"quiere","el":"quiere","ella":"quiere","nosotros":"queremos"},"past":{"yo":"quise","tu":"quisiste","usted":"quiso","el":"quiso","ella":"quiso","nosotros":"quisimos"}}},
+        {"id":"poder","english":"can / be able","infinitive":"poder","conjugations":{"present":{"yo":"puedo","tu":"puedes","usted":"puede","el":"puede","ella":"puede","nosotros":"podemos"},"past":{"yo":"pude","tu":"pudiste","usted":"pudo","el":"pudo","ella":"pudo","nosotros":"pudimos"}}},
+        {"id":"tener","english":"have","infinitive":"tener","conjugations":{"present":{"yo":"tengo","tu":"tienes","usted":"tiene","el":"tiene","ella":"tiene","nosotros":"tenemos"},"past":{"yo":"tuve","tu":"tuviste","usted":"tuvo","el":"tuvo","ella":"tuvo","nosotros":"tuvimos"}}},
+        {"id":"ir","english":"go","infinitive":"ir","conjugations":{"present":{"yo":"voy","tu":"vas","usted":"va","el":"va","ella":"va","nosotros":"vamos"},"past":{"yo":"fui","tu":"fuiste","usted":"fue","el":"fue","ella":"fue","nosotros":"fuimos"}}},
+        {"id":"estar","english":"be / feel / location","infinitive":"estar","conjugations":{"present":{"yo":"estoy","tu":"estás","usted":"está","el":"está","ella":"está","nosotros":"estamos"},"past":{"yo":"estuve","tu":"estuviste","usted":"estuvo","el":"estuvo","ella":"estuvo","nosotros":"estuvimos"}}},
+        {"id":"ver","english":"see","infinitive":"ver","conjugations":{"present":{"yo":"veo","tu":"ves","usted":"ve","el":"ve","ella":"ve","nosotros":"vemos"},"past":{"yo":"vi","tu":"viste","usted":"vio","el":"vio","ella":"vio","nosotros":"vimos"}}},
+        {"id":"llamar","english":"call","infinitive":"llamar","conjugations":{"present":{"yo":"llamo","tu":"llamas","usted":"llama","el":"llama","ella":"llama","nosotros":"llamamos"},"past":{"yo":"llamé","tu":"llamaste","usted":"llamó","el":"llamó","ella":"llamó","nosotros":"llamamos"}}}
+      ],
+      "complements":[
+        {"english":"with my family","target":"con mi familia","verbs":["hablar","estar"]},
+        {"english":"with you","target":"contigo","verbs":["hablar","estar"]},
+        {"english":"at the café","target":"en el café","verbs":["hablar","estar"]},
+        {"english":"to the store","target":"a la tienda","verbs":["ir"]},
+        {"english":"the appointment","target":"la cita","verbs":["querer","tener"]},
+        {"english":"your message","target":"tu mensaje","verbs":["tener","ver"]},
+        {"english":"Spanish","target":"español","verbs":["hablar"]},
+        {"english":"about technology","target":"sobre tecnología","verbs":["hablar"]},
+        {"english":"talk with you","target":"hablar contigo","verbs":["querer","poder"]},
+        {"english":"go to the store","target":"ir a la tienda","verbs":["querer","poder"]},
+        {"english":"call you","target":"llamarte","verbs":["querer","poder"]},
+        {"english":"my family","target":"a mi familia","verbs":["llamar","ver"]},
+        {"english":"you","target":"a ti","verbs":["llamar","ver"]}
+      ],
+      "times":[{"english":"","target":""},{"english":"today","target":"hoy"},{"english":"tomorrow","target":"mañana"},{"english":"now","target":"ahora"},{"english":"this weekend","target":"este fin de semana"},{"english":"yesterday","target":"ayer"}]
+    },
+    "arabic": {
+      "name":"Syrian Arabic",
+      "speechLang":"ar-SY",
+      "direction":"rtl",
+      "subjects":[
+        {"person":"ana","english":"I","target":"أنا","transliteration":"ana"},{"person":"inta","english":"you (man)","target":"إنتَ","transliteration":"inta"},{"person":"inti","english":"you (woman)","target":"إنتِ","transliteration":"inti"},{"person":"huwwe","english":"he","target":"هوّي","transliteration":"huwwe"},{"person":"hiyye","english":"she","target":"هيّي","transliteration":"hiyye"},{"person":"niḥna","english":"we","target":"نحنا","transliteration":"niḥna"}
+      ],
+      "verbs":[
+        {"id":"speak","english":"speak / talk","infinitive":"يحكي · yiḥki","conjugations":{"present":{"ana":{"target":"بحكي","transliteration":"baḥki"},"inta":{"target":"بتحكي","transliteration":"btiḥki"},"inti":{"target":"بتحكي","transliteration":"btiḥki"},"huwwe":{"target":"بيحكي","transliteration":"byiḥki"},"hiyye":{"target":"بتحكي","transliteration":"btiḥki"},"niḥna":{"target":"منحكي","transliteration":"mniḥki"}},"past":{"ana":{"target":"حكيت","transliteration":"ḥakēt"},"inta":{"target":"حكيت","transliteration":"ḥakēt"},"inti":{"target":"حكيتي","transliteration":"ḥakēti"},"huwwe":{"target":"حكى","transliteration":"ḥaka"},"hiyye":{"target":"حكت","transliteration":"ḥakit"},"niḥna":{"target":"حكينا","transliteration":"ḥakēna"}}}},
+        {"id":"want","english":"want","infinitive":"بدّه · biddo","conjugations":{"present":{"ana":{"target":"بدّي","transliteration":"baddi"},"inta":{"target":"بدّك","transliteration":"baddak"},"inti":{"target":"بدّك","transliteration":"baddik"},"huwwe":{"target":"بدّه","transliteration":"biddo"},"hiyye":{"target":"بدها","transliteration":"badda"},"niḥna":{"target":"بدنا","transliteration":"baddna"}},"past":{"ana":{"target":"كان بدّي","transliteration":"kān baddi"},"inta":{"target":"كان بدّك","transliteration":"kān baddak"},"inti":{"target":"كان بدّك","transliteration":"kān baddik"},"huwwe":{"target":"كان بدّه","transliteration":"kān biddo"},"hiyye":{"target":"كان بدها","transliteration":"kān badda"},"niḥna":{"target":"كان بدنا","transliteration":"kān baddna"}}}},
+        {"id":"can","english":"can / be able","infinitive":"فيه · fīh","conjugations":{"present":{"ana":{"target":"فيني","transliteration":"fīni"},"inta":{"target":"فيك","transliteration":"fīk"},"inti":{"target":"فيكي","transliteration":"fīki"},"huwwe":{"target":"فيه","transliteration":"fīh"},"hiyye":{"target":"فيها","transliteration":"fīha"},"niḥna":{"target":"فينا","transliteration":"fīna"}},"past":{"ana":{"target":"كان فيني","transliteration":"kān fīni"},"inta":{"target":"كان فيك","transliteration":"kān fīk"},"inti":{"target":"كان فيكي","transliteration":"kān fīki"},"huwwe":{"target":"كان فيه","transliteration":"kān fīh"},"hiyye":{"target":"كان فيها","transliteration":"kān fīha"},"niḥna":{"target":"كان فينا","transliteration":"kān fīna"}}}},
+        {"id":"go","english":"go","infinitive":"يروح · yrūḥ","conjugations":{"present":{"ana":{"target":"بروح","transliteration":"brūḥ"},"inta":{"target":"بتروح","transliteration":"btrūḥ"},"inti":{"target":"بتروحي","transliteration":"btrūḥi"},"huwwe":{"target":"بيروح","transliteration":"byrūḥ"},"hiyye":{"target":"بتروح","transliteration":"btrūḥ"},"niḥna":{"target":"منروح","transliteration":"mnrūḥ"}},"past":{"ana":{"target":"رحت","transliteration":"riḥt"},"inta":{"target":"رحت","transliteration":"riḥt"},"inti":{"target":"رحتي","transliteration":"riḥti"},"huwwe":{"target":"راح","transliteration":"rāḥ"},"hiyye":{"target":"راحت","transliteration":"rāḥit"},"niḥna":{"target":"رحنا","transliteration":"riḥna"}}}},
+        {"id":"see","english":"see","infinitive":"يشوف · yshūf","conjugations":{"present":{"ana":{"target":"بشوف","transliteration":"bshūf"},"inta":{"target":"بتشوف","transliteration":"btshūf"},"inti":{"target":"بتشوفي","transliteration":"btshūfi"},"huwwe":{"target":"بيشوف","transliteration":"byshūf"},"hiyye":{"target":"بتشوف","transliteration":"btshūf"},"niḥna":{"target":"منشوف","transliteration":"mnshūf"}},"past":{"ana":{"target":"شفت","transliteration":"shift"},"inta":{"target":"شفت","transliteration":"shift"},"inti":{"target":"شفتي","transliteration":"shifti"},"huwwe":{"target":"شاف","transliteration":"shāf"},"hiyye":{"target":"شافت","transliteration":"shāfit"},"niḥna":{"target":"شفنا","transliteration":"shifna"}}}},
+        {"id":"call","english":"call","infinitive":"يدقّ · ydiʾʾ","conjugations":{"present":{"ana":{"target":"بدقّ","transliteration":"bdiʾʾ"},"inta":{"target":"بتدقّ","transliteration":"btdiʾʾ"},"inti":{"target":"بتدقّي","transliteration":"btdiʾʾi"},"huwwe":{"target":"بيدقّ","transliteration":"bydiʾʾ"},"hiyye":{"target":"بتدقّ","transliteration":"btdiʾʾ"},"niḥna":{"target":"مندقّ","transliteration":"mndiʾʾ"}},"past":{"ana":{"target":"دقّيت","transliteration":"daʾʾēt"},"inta":{"target":"دقّيت","transliteration":"daʾʾēt"},"inti":{"target":"دقّيتي","transliteration":"daʾʾēti"},"huwwe":{"target":"دقّ","transliteration":"daʾʾ"},"hiyye":{"target":"دقّت","transliteration":"daʾʾit"},"niḥna":{"target":"دقّينا","transliteration":"daʾʾēna"}}}},
+        {"id":"bring","english":"bring","infinitive":"يجيب · yjīb","conjugations":{"present":{"ana":{"target":"بجيب","transliteration":"bjīb"},"inta":{"target":"بتجيب","transliteration":"btjīb"},"inti":{"target":"بتجيبي","transliteration":"btjībi"},"huwwe":{"target":"بيجيب","transliteration":"byjīb"},"hiyye":{"target":"بتجيب","transliteration":"btjīb"},"niḥna":{"target":"منجيب","transliteration":"mnjīb"}},"past":{"ana":{"target":"جبت","transliteration":"jibt"},"inta":{"target":"جبت","transliteration":"jibt"},"inti":{"target":"جبتي","transliteration":"jibti"},"huwwe":{"target":"جاب","transliteration":"jāb"},"hiyye":{"target":"جابت","transliteration":"jābit"},"niḥna":{"target":"جبنا","transliteration":"jibna"}}}},
+        {"id":"like","english":"like / love","infinitive":"يحبّ · yḥibb","conjugations":{"present":{"ana":{"target":"بحبّ","transliteration":"bḥibb"},"inta":{"target":"بتحبّ","transliteration":"btḥibb"},"inti":{"target":"بتحبّي","transliteration":"btḥibbi"},"huwwe":{"target":"بيحبّ","transliteration":"byḥibb"},"hiyye":{"target":"بتحبّ","transliteration":"btḥibb"},"niḥna":{"target":"منحبّ","transliteration":"mnḥibb"}},"past":{"ana":{"target":"حبّيت","transliteration":"ḥabbēt"},"inta":{"target":"حبّيت","transliteration":"ḥabbēt"},"inti":{"target":"حبّيتي","transliteration":"ḥabbēti"},"huwwe":{"target":"حبّ","transliteration":"ḥabb"},"hiyye":{"target":"حبّت","transliteration":"ḥabbit"},"niḥna":{"target":"حبّينا","transliteration":"ḥabbēna"}}}}
+      ],
+      "complements":[
+        {"english":"with my family","target":"مع عيلتي","transliteration":"maʿ ʿēlti","verbs":["speak"]},
+        {"english":"with you (man)","target":"معك","transliteration":"maʿak","verbs":["speak"]},
+        {"english":"with you (woman)","target":"معك","transliteration":"maʿik","verbs":["speak"]},
+        {"english":"about technology","target":"عن التكنولوجيا","transliteration":"ʿan it-tiknolojya","verbs":["speak"]},
+        {"english":"to the store","target":"عالمحل","transliteration":"ʿal-maḥall","verbs":["go"]},
+        {"english":"the appointment","target":"الموعد","transliteration":"il-mawʿid","verbs":["want"]},
+        {"english":"your message","target":"رسالتك","transliteration":"risāltak","verbs":["see"]},
+        {"english":"talk with you","target":"احكي معك","transliteration":"iḥki maʿak","verbs":["want","can"]},
+        {"english":"go to the store","target":"روح عالمحل","transliteration":"rūḥ ʿal-maḥall","verbs":["want","can"]},
+        {"english":"see you","target":"شوفك","transliteration":"shūfak","verbs":["want","can"]},
+        {"english":"call you","target":"دقلك","transliteration":"diʾʾlak","verbs":["want","can"]},
+        {"english":"water","target":"مي","transliteration":"mayy","verbs":["bring"]},
+        {"english":"coffee","target":"قهوة","transliteration":"ʾahwe","verbs":["bring","like"]},
+        {"english":"music","target":"الموسيقى","transliteration":"il-mūsīqa","verbs":["like"]},
+        {"english":"technology","target":"التكنولوجيا","transliteration":"it-tiknolojya","verbs":["like"]},
+        {"english":"you","target":"لك","transliteration":"lak","verbs":["call"]},
+        {"english":"my family","target":"لعيلتي","transliteration":"la-ʿēlti","verbs":["call"]},
+        {"english":"my family","target":"عيلتي","transliteration":"ʿēlti","verbs":["see"]}
+      ],
+      "times":[{"english":"","target":"","transliteration":""},{"english":"today","target":"اليوم","transliteration":"il-yōm"},{"english":"tomorrow","target":"بكرا","transliteration":"bukra"},{"english":"now","target":"هلّق","transliteration":"hallaʾ"},{"english":"this weekend","target":"هالعطلة","transliteration":"hal-ʿuṭle"},{"english":"yesterday","target":"مبارح","transliteration":"mbāriḥ"}]
+    }
+  }
+}

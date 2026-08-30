@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{ report.period|title }} SpeakTrain Report</title><link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"></head>
+<body class="report-page">
+  <header class="no-print"><div><span class="mark">ST</span><strong>SpeakTrain Report</strong></div><div class="account-bar"><a href="{{ url_for('main.index') }}">Back</a><button onclick="window.print()">Print / Save PDF</button></div></header>
+  <main>
+    <article class="report-sheet">
+      <div class="report-heading"><div><div class="eyebrow">{{ report.period|upper }} STUDY & GRADE REPORT</div><h1>{{ report_user.username }}</h1></div><p>Generated {{ generated }}</p></div>
+      <div class="stat-grid">
+        <div class="stat"><strong>{{ report.summary.attempts }}</strong><span>Phrase attempts</span></div>
+        <div class="stat"><strong>{{ report.summary.average if report.summary.average is not none else '—' }}{% if report.summary.average is not none %}%{% endif %}</strong><span>Average match</span></div>
+        <div class="stat"><strong>{{ report.summary.vocabulary_attempts }}</strong><span>Vocabulary answers</span></div>
+        <div class="stat"><strong>{{ report.summary.vocabulary_accuracy if report.summary.vocabulary_accuracy is not none else '—' }}{% if report.summary.vocabulary_accuracy is not none %}%{% endif %}</strong><span>Vocabulary accuracy</span></div>
+      </div>
+      <div class="insight-grid"><div><h3>Strengths</h3>{% for text in report.strengths %}<p>{{ text }}</p>{% endfor %}</div><div><h3>Work on</h3>{% for text in report.weaknesses %}<p>{{ text }}</p>{% endfor %}</div><div><h3>Next steps</h3>{% for text in report.tips %}<p>{{ text }}</p>{% endfor %}</div></div>
+      <h2>{{ report.period|title }} vocabulary sheet</h2>
+      <table><thead><tr><th>Language</th><th>English</th><th>Target</th><th>Transliteration</th><th>Grade</th></tr></thead><tbody>{% for item in report.study %}<tr><td>{{ item.language }}</td><td>{{ item.english }}</td><td dir="auto">{{ item.target }}</td><td>{{ item.transliteration }}</td><td>{{ item.average if item.average is not none else 'New' }}{% if item.average is not none %}%{% endif %}</td></tr>{% endfor %}</tbody></table>
+      <div class="practice-box"><h3>Recall check</h3><p>Cover the target-language and transliteration columns. Produce each phrase from English. Mark: □ recalled immediately &nbsp; □ recalled with cue &nbsp; □ review needed</p></div>
+    </article>
+  </main>
+</body></html>

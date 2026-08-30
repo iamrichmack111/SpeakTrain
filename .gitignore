@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+instance/
+.coverage
+coverage.xml
+htmlcov/
+node_modules/
+playwright-report/
+test-results/
+.DS_Store
+.env
+dist/
+*.sqlite3

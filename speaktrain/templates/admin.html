@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SpeakTrain Admin</title><link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"></head>
+<body>
+  <header><div><span class="mark">ST</span><strong>SpeakTrain Admin</strong></div><div class="account-bar"><a href="{{ url_for('main.index') }}">Back to courses</a><a href="{{ url_for('main.admin_grades_csv') }}">Export all grades CSV</a></div></header>
+  <main>
+    <article class="lesson-card admin-create">
+      <div class="eyebrow">USER MANAGEMENT</div><h1>Add a learner or administrator</h1>
+      <form method="post" action="{{ url_for('main.admin_add_user') }}" class="inline-form">
+        <label>Username<input name="username" minlength="2" required></label>
+        <label>Temporary password<input name="password" type="password" minlength="6" required></label>
+        <label>Role<select name="role"><option value="student">Student</option><option value="admin">Administrator</option></select></label>
+        <button type="submit">Add user</button>
+      </form>
+    </article>
+    <section class="admin-users">
+      {% for item in users %}
+      <article class="lesson-card user-card">
+        <div class="user-title"><div><h2>{{ item.username }}</h2><span class="pill">{{ item.role }}</span></div><strong>Level {{ item.profile.level }} · {{ item.profile.xp }} XP</strong></div>
+        <div class="stat-grid compact">
+          <div class="stat"><strong>{{ item.report.summary.attempts }}</strong><span>30-day phrases</span></div>
+          <div class="stat"><strong>{{ item.report.summary.average if item.report.summary.average is not none else '—' }}{% if item.report.summary.average is not none %}%{% endif %}</strong><span>Average match</span></div>
+          <div class="stat"><strong>{{ item.report.summary.vocabulary_attempts }}</strong><span>Vocabulary answers</span></div>
+          <div class="stat"><strong>{{ item.report.summary.vocabulary_accuracy if item.report.summary.vocabulary_accuracy is not none else '—' }}{% if item.report.summary.vocabulary_accuracy is not none %}%{% endif %}</strong><span>Vocabulary</span></div>
+        </div>
+        <div class="insight-grid"><div><h3>Strengths</h3>{% for text in item.report.strengths %}<p>{{ text }}</p>{% endfor %}</div><div><h3>Weaknesses</h3>{% for text in item.report.weaknesses %}<p>{{ text }}</p>{% endfor %}</div><div><h3>Teaching tips</h3>{% for text in item.report.tips %}<p>{{ text }}</p>{% endfor %}</div></div>
+        <div class="admin-actions">
+          <form method="post" action="{{ url_for('main.admin_password', user_id=item.id) }}"><input name="password" type="password" minlength="6" placeholder="New password" required><button>Change password</button></form>
+          {% if item.id != g.user.id %}<form method="post" action="{{ url_for('main.admin_delete_user', user_id=item.id) }}" onsubmit="return confirm('Delete this user and all grades?')"><button class="danger">Delete user</button></form>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    <section id="curriculum" class="curriculum-admin">
+      <article class="lesson-card"><div class="eyebrow">CURRICULUM STUDIO</div><h1>Add lessons without editing JSON</h1><p class="note">Required fields are marked *. Optional gender, formal, and response fields appear automatically in learner practice.</p>
+        <form method="post" action="{{ url_for('main.admin_add_phrase') }}" class="editor-form">
+          <label>Language *<select name="language"><option value="spanish">Spanish</option><option value="arabic">Arabic</option></select></label>
+          <label>Course *<select name="course">{% for course in courses %}<option value="{{ course.id }}">{{ course.name }}</option>{% endfor %}</select></label>
+          <label>Module name<input name="scenario" value="Custom lessons"></label>
+          <label>English *<input name="english" required></label>
+          <label>Informal target *<input name="target" required dir="auto"></label>
+          <label>Informal transliteration *<input name="transliteration" required></label>
+          <label>Formal target<input name="formal_target" dir="auto"></label>
+          <label>Formal transliteration<input name="formal_transliteration"></label>
+          <label>Speaking to a man<input name="male_target" dir="auto"></label>
+          <label>Male transliteration<input name="male_transliteration"></label>
+          <label>Speaking to a woman<input name="female_target" dir="auto"></label>
+          <label>Female transliteration<input name="female_transliteration"></label>
+          <label>Natural response<input name="response" dir="auto"></label>
+          <label>Response in English<input name="response_english"></label>
+          <label>Response transliteration<input name="response_transliteration"></label>
+          <label>Teaching note<input name="note"></label>
+          <button type="submit">Add phrase to course</button>
+        </form>
+        {% if custom_phrases %}<h3>Custom phrases</h3><div class="editable-list">{% for item in custom_phrases %}<div><span><strong>{{ item.english }}</strong><small>{{ item.language }} · {{ item.scenario }}</small></span><form method="post" action="{{ url_for('main.admin_delete_phrase', item_id=item.id) }}"><button class="danger">Delete</button></form></div>{% endfor %}</div>{% endif %}
+      </article>
+      <article class="lesson-card"><div class="eyebrow">VOCABULARY EDITOR</div><h2>Add to the searchable word library</h2>
+        <form method="post" action="{{ url_for('main.admin_add_vocabulary') }}" class="editor-form vocab-editor">
+          <label>English *<input name="english" required></label><label>Spanish *<input name="spanish" required></label><label>Spanish pronunciation *<input name="spanish_pronunciation" required></label><label>Arabic *<input name="arabic" required dir="rtl"></label><label>Arabic transliteration *<input name="arabic_transliteration" required></label><label>Category<input name="category" value="Custom"></label><label>Part of speech<input name="part_of_speech" value="word"></label><label>Transfer note<input name="note"></label><label class="check-label"><input type="checkbox" name="cognate" value="1"> English–Spanish cognate</label><button type="submit">Add vocabulary</button>
+        </form>
+        {% if custom_vocabulary %}<div class="editable-list">{% for item in custom_vocabulary %}<div><span><strong>{{ item.english }} · {{ item.spanish }} · {{ item.arabic }}</strong><small>{{ item.category }}</small></span><form method="post" action="{{ url_for('main.admin_delete_vocabulary', item_id=item.id) }}"><button class="danger">Delete</button></form></div>{% endfor %}</div>{% endif %}
+      </article>
+    </section>
+  </main>
+</body></html>

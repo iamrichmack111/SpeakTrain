@@ -1,0 +1,15 @@
+services:
+  speaktrain:
+    image: ghcr.io/iamrichmack111/speaktrain:v0.6.0
+    build: .
+    ports:
+      - "8095:8095"
+    environment:
+      SPEAKTRAIN_SECRET_KEY: change-this-before-public-deployment
+      SPEAKTRAIN_DATABASE: /data/speaktrain.sqlite3
+    volumes:
+      - speaktrain-data:/data
+    restart: unless-stopped
+
+volumes:
+  speaktrain-data:

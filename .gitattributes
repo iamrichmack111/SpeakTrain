@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.svg text
+*.json text
+*.d2 text linguist-language=D2
+docs/diagrams/generated/* linguist-generated=true
+package-lock.json linguist-generated=true

@@ -1,0 +1,15 @@
+direction: right
+classes: {
+  service: {style.fill: "#10201a"; style.stroke: "#59e391"; style.font-color: "#f2f7f4"; border-radius: 14}
+}
+learner: Learner {class: service; icon: ../icons/user.svg}
+browser: Dynamic Web UI {class: service; icon: ../icons/browser.svg}
+flask: Flask Application {class: service; icon: ../icons/flask.svg}
+curriculum: Course + Lexicon Data {class: service; icon: ../icons/book.svg}
+sqlite: SQLite Progress Store {class: service; icon: ../icons/database.svg}
+whisper: Faster Whisper {class: service; icon: ../icons/microphone.svg}
+learner -> browser: practice + reports
+browser -> flask: HTTPS / JSON
+flask -> curriculum: lessons + forms
+flask -> sqlite: users + mastery
+flask -> whisper: local transcription

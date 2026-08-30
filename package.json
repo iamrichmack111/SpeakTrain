@@ -1,0 +1,14 @@
+{
+  "name": "speaktrain-quality-suite",
+  "private": true,
+  "version": "0.6.0",
+  "description": "Playwright browser tests and documentation screenshots for SpeakTrain",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "screenshots": "playwright test tests/e2e/screenshots.spec.js",
+    "install:browsers": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
+  }
+}

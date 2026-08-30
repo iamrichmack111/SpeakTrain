@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a learning or platform improvement
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      {
+        label: Learning problem,
+        description: What learner or administrator problem should this solve?,
+      }
+    validations: { required: true }
+  - type: textarea
+    id: outcome
+    attributes:
+      {
+        label: Desired outcome,
+        description: Describe observable success rather than only an interface control.,
+      }
+    validations: { required: true }
+  - type: textarea
+    id: language
+    attributes:
+      {
+        label: Language and register,
+        description: Spanish,
+        Syrian Arabic,
+        MSA,
+        gender,
+        formality,
+        or all.,
+      }

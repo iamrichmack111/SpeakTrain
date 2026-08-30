@@ -37,7 +37,8 @@ gh repo edit "${slug}" \
   --homepage "https://github.com/${slug}" \
   --enable-issues \
   --enable-wiki \
-  --visibility public
+  --visibility public \
+  --accept-visibility-change-consequences
 
 for topic in flask language-learning spanish arabic whisper spaced-repetition playwright docker d2; do
   gh repo edit "${slug}" --add-topic "${topic}"

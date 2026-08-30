@@ -3,15 +3,24 @@ const path = require('path');
 
 const shot = name => path.join(process.cwd(), 'docs', 'screenshots', name);
 
-test('capture every public documentation page from a fresh admin login', async ({page}) => {
+test('capture every public documentation page from a fresh admin login', async ({page, context}) => {
   await page.goto('/login');
   await expect(page.getByRole('heading', {name: 'Welcome back'})).toBeVisible();
   await page.screenshot({path: shot('01-login.png'), fullPage: true, animations: 'disabled'});
 
-  await page.getByLabel('Username').fill('admin');
-  await page.getByLabel('Password').fill('admin');
-  const loginForm = page.getByLabel('Username').locator('xpath=ancestor::form');
-  await loginForm.locator('button[type="submit"], input[type="submit"]').click();
+  // Authenticate against the isolated Playwright database.
+  // BrowserContext.request shares cookies with the browser context.
+  const login = await context.request.post('/login', {
+    form: {
+      username: 'admin',
+      password: 'admin',
+    },
+    maxRedirects: 0,
+  });
+
+  expect([302, 303]).toContain(login.status());
+
+  await page.goto('/');
   await expect(page.getByText('YOUR ADAPTIVE SESSION')).toBeVisible();
   await page.screenshot({path: shot('02-today-dashboard.png'), fullPage: true, animations: 'disabled'});
 

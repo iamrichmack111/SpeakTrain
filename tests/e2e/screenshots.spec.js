@@ -10,7 +10,7 @@ test('capture every public documentation page from a fresh admin login', async (
 
   await page.getByLabel('Username').fill('admin');
   await page.getByLabel('Password').fill('admin');
-  await page.getByRole('button', {name: 'Log in'}).click();
+  await page.locator('button[type="submit"], input[type="submit"]').first().click();
   await expect(page.getByText('YOUR ADAPTIVE SESSION')).toBeVisible();
   await page.screenshot({path: shot('02-today-dashboard.png'), fullPage: true, animations: 'disabled'});
 

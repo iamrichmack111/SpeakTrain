@@ -1,7 +1,7 @@
 const {defineConfig, devices} = require('@playwright/test');
 
 const python = process.env.PYTHON_EXECUTABLE || 'python3';
-const database = 'instance/playwright.sqlite3';
+const database = require('path').resolve(__dirname, 'instance', 'playwright.sqlite3');
 
 module.exports = defineConfig({
   testDir: './tests/e2e',

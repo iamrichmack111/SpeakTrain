@@ -10,7 +10,8 @@ test('capture every public documentation page from a fresh admin login', async (
 
   await page.getByLabel('Username').fill('admin');
   await page.getByLabel('Password').fill('admin');
-  await page.locator('button[type="submit"], input[type="submit"]').first().click();
+  const loginForm = page.getByLabel('Username').locator('xpath=ancestor::form');
+  await loginForm.locator('button[type="submit"], input[type="submit"]').click();
   await expect(page.getByText('YOUR ADAPTIVE SESSION')).toBeVisible();
   await page.screenshot({path: shot('02-today-dashboard.png'), fullPage: true, animations: 'disabled'});
 

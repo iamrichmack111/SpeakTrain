@@ -24,8 +24,15 @@ test('capture every public documentation page from a fresh admin login', async (
   await expect(page.getByText('YOUR ADAPTIVE SESSION')).toBeVisible();
   await page.screenshot({path: shot('02-today-dashboard.png'), fullPage: true, animations: 'disabled'});
 
-  await page.getByRole('button', {name: 'Phrase practice'}).click();
+  // Wait until the asynchronous catalog/render cycle has populated practice data.
+  await expect(page.locator('#target')).not.toHaveText('');
+
+  // Target the actual application tab rather than relying on accessible-name timing.
+  await page.locator('button[data-view="practice"]').click();
+
+  await expect(page.locator('#practice')).toHaveClass(/active/);
   await expect(page.locator('#target')).toBeVisible();
+
   await page.screenshot({path: shot('03-phrase-practice.png'), fullPage: true, animations: 'disabled'});
 
   await page.getByRole('button', {name: 'Courses'}).click();

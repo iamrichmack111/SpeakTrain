@@ -1,0 +1,193 @@
+name: CI CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: CI Python
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-ci.txt
+
+      - name: Compile application
+        run: |
+          python -m compileall -q app.py speaktrain
+
+      - name: Run Python tests
+        run: |
+          pytest -q
+
+      - name: Validate documentation
+        run: |
+          python scripts/check_docs.py
+
+  playwright:
+    name: Playwright Demo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-ci.txt
+
+      - name: Install Node dependencies
+        run: |
+          npm ci
+
+      - name: Install Chromium
+        run: |
+          npx playwright install --with-deps chromium
+
+      - name: Run Playwright
+        run: |
+          npx playwright test --grep-invert "record SpeakTrain browser demo"
+
+      - name: Verify screenshots
+        run: |
+          test -s docs/screenshots/01-login.png
+          test -s docs/screenshots/02-today-dashboard.png
+          test -s docs/screenshots/03-phrase-practice.png
+          test -s docs/screenshots/04-courses.png
+          test -s docs/screenshots/05-opi-simulator.png
+          test -s docs/screenshots/06-vocabulary-test.png
+          test -s docs/screenshots/07-conjugation-drill.png
+          test -s docs/screenshots/08-conversation.png
+          test -s docs/screenshots/09-vocabulary-sentence-lab.png
+          test -s docs/screenshots/10-progress.png
+          test -s docs/screenshots/11-admin-curriculum.png
+          test -s docs/screenshots/12-weekly-report.png
+
+      - name: Upload Playwright results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: speaktrain-playwright
+          path: |
+            docs/screenshots/
+            docs/demo/
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+
+  cd:
+    name: CD Docker Build and Health Check
+    needs:
+      - ci
+      - playwright
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build deployable image
+        run: |
+          docker build \
+            --pull \
+            -t speaktrain:${GITHUB_SHA} \
+            .
+
+      - name: Start deployment container
+        run: |
+          docker rm -f speaktrain-cd 2>/dev/null || true
+
+          docker run -d \
+            --name speaktrain-cd \
+            -p 127.0.0.1:8095:8095 \
+            speaktrain:${GITHUB_SHA}
+
+          docker ps -a
+
+      - name: Health check
+        run: |
+          set -e
+
+          for i in $(seq 1 60); do
+            echo "Health attempt $i"
+
+            RUNNING="$(docker inspect -f '{{.State.Running}}' speaktrain-cd 2>/dev/null || echo false)"
+
+            if [ "$RUNNING" != "true" ]; then
+              echo "Container stopped."
+              docker ps -a
+              docker logs speaktrain-cd
+              exit 1
+            fi
+
+            if curl -fsS http://127.0.0.1:8095/healthz; then
+              echo
+              echo "SpeakTrain health check passed."
+              exit 0
+            fi
+
+            sleep 2
+          done
+
+          echo "Health check timed out."
+          docker logs speaktrain-cd
+          exit 1
+
+      - name: Application smoke test
+        run: |
+          curl -fsS -L http://127.0.0.1:8095/login | grep -qi "Welcome back"
+          curl -fsS http://127.0.0.1:8095/healthz
+          docker logs speaktrain-cd
+
+      - name: Save deployable Docker image
+        run: |
+          docker save speaktrain:${GITHUB_SHA} | gzip > speaktrain-docker-image.tar.gz
+          test -s speaktrain-docker-image.tar.gz
+          ls -lh speaktrain-docker-image.tar.gz
+
+      - name: Upload deployment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: speaktrain-docker-${{ github.sha }}
+          path: speaktrain-docker-image.tar.gz
+          retention-days: 14
+
+      - name: Final container status
+        if: always()
+        run: |
+          docker ps -a
+          docker logs speaktrain-cd 2>/dev/null || true

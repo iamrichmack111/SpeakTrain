@@ -5,6 +5,7 @@ const database = require('path').resolve(__dirname, 'instance', 'playwright.sqli
 
 module.exports = defineConfig({
   testDir: './tests/e2e',
+  testIgnore: ['**/demo.spec.js'],
   timeout: 45_000,
   expect: {timeout: 8_000},
   fullyParallel: false,

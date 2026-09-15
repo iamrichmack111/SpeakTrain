@@ -17,6 +17,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py ./
 COPY speaktrain ./speaktrain
 
+# Flask's instance directory is created at startup. Gunicorn runs as the
+# non-root speaktrain user, so make both runtime write locations writable.
+RUN mkdir -p /app/instance/audio /data \
+    && chown -R speaktrain:speaktrain /app/instance /data
+
 USER speaktrain
 EXPOSE 8095
 VOLUME ["/data"]

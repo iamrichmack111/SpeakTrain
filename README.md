@@ -1,6 +1,8 @@
 # SpeakTrain
 
 [![CI](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/ci.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/ci.yml)
+[![Playwright Demo](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/screenshots.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/screenshots.yml)
+[![CD](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/docker-publish.yml)
 [![CodeQL](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/codeql.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/codeql.yml)
 [![Docker](https://img.shields.io/badge/GHCR-v0.6.0-59e391?logo=docker&logoColor=white)](https://github.com/iamrichmack111/SpeakTrain/pkgs/container/speaktrain)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-f4c95d?logo=python&logoColor=white)](https://www.python.org/)
@@ -40,19 +42,45 @@ Most language tools separate vocabulary, grammar, pronunciation, and conversatio
 - Administrator Curriculum Studio—no JSON editing required.
 - Docker, multi-architecture GHCR publishing, CodeQL, Dependabot, D2, and Playwright.
 
-## Screenshots
+<!-- PLAYWRIGHT-DEMO:START -->
+## Playwright Demo
 
-Playwright creates these images from a fresh isolated `admin / admin` fixture and refreshes them automatically on `main`.
+This animated walkthrough is built from the Playwright browser captures in this repository. The automated Playwright demo test also records a real browser video during CI.
+
+[![SpeakTrain Playwright demo](docs/demo/speaktrain-playwright-demo.gif)](docs/demo/speaktrain-playwright-demo.mp4)
+
+**[Open the full demo video](docs/demo/speaktrain-playwright-demo.mp4)**
+<!-- PLAYWRIGHT-DEMO:END -->
+
+## Playwright Screenshots
+
+All twelve screenshots below are captured by Playwright from a fresh isolated `admin / admin` test fixture and are refreshed automatically by the screenshot workflow.
 
 | Login | Adaptive dashboard |
 |---|---|
-| ![Login](docs/screenshots/01-login.png) | ![Today dashboard](docs/screenshots/02-today-dashboard.png) |
+| ![Playwright login](docs/screenshots/01-login.png) | ![Playwright Today dashboard](docs/screenshots/02-today-dashboard.png) |
 
-| Phrase practice | Admin Curriculum Studio |
+| Phrase practice | Courses |
 |---|---|
-| ![Phrase practice](docs/screenshots/03-phrase-practice.png) | ![Admin](docs/screenshots/11-admin-curriculum.png) |
+| ![Playwright phrase practice](docs/screenshots/03-phrase-practice.png) | ![Playwright courses](docs/screenshots/04-courses.png) |
 
-All twelve captures are documented in [`docs/screenshots`](docs/screenshots) and uploaded with the Playwright HTML report in CI.
+| OPI simulator | Vocabulary test |
+|---|---|
+| ![Playwright OPI simulator](docs/screenshots/05-opi-simulator.png) | ![Playwright vocabulary test](docs/screenshots/06-vocabulary-test.png) |
+
+| Conjugation drill | Guided conversation |
+|---|---|
+| ![Playwright conjugation drill](docs/screenshots/07-conjugation-drill.png) | ![Playwright guided conversation](docs/screenshots/08-conversation.png) |
+
+| Vocabulary & sentence lab | Progress |
+|---|---|
+| ![Playwright vocabulary and sentence lab](docs/screenshots/09-vocabulary-sentence-lab.png) | ![Playwright progress](docs/screenshots/10-progress.png) |
+
+| Admin Curriculum Studio | Weekly report |
+|---|---|
+| ![Playwright admin Curriculum Studio](docs/screenshots/11-admin-curriculum.png) | ![Playwright weekly report](docs/screenshots/12-weekly-report.png) |
+
+The CI browser job uploads the Playwright HTML report, traces, screenshots, and demo artifacts for inspection.
 
 ## Architecture
 

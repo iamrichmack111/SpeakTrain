@@ -29,6 +29,12 @@ def main():
         assert all("icon:" in line for line in nodes), f"Every D2 node needs an icon: {diagram.name}"
     screenshot_spec = (ROOT / "tests" / "e2e" / "screenshots.spec.js").read_text(encoding="utf-8")
     assert screenshot_spec.count(".png'") >= 12, "Expected at least twelve Playwright documentation screenshots"
+    demo_spec = (ROOT / "tests" / "e2e" / "demo.spec.js").read_text(encoding="utf-8")
+    assert "video" in demo_spec and "saveAs" in demo_spec, "Playwright demo must record a browser video"
+    assert (ROOT / "docs" / "demo" / "speaktrain-playwright-demo.gif").is_file(), "README Playwright demo GIF is missing"
+    assert (ROOT / "docs" / "demo" / "speaktrain-playwright-demo.mp4").is_file(), "Playwright demo MP4 is missing"
+    for screenshot in sorted((ROOT / "docs" / "screenshots").glob("*.png")):
+        assert screenshot.name in readme, f"README does not embed {screenshot.name}"
     print("Documentation validation passed: README, Wiki, D2 icons, and screenshot coverage")
 
 

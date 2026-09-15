@@ -1,2 +1,2 @@
-# Speech dependencies are included in the default SpeakTrain installation.
 -r requirements.txt
+faster-whisper==1.2.0

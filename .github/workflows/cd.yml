@@ -1,0 +1,67 @@
+name: CD
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Deployable Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          push: false
+          tags: speaktrain:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Start container
+        run: |
+          docker run -d \
+            --name speaktrain-ci \
+            -p 8095:8095 \
+            speaktrain:${{ github.sha }}
+
+      - name: Health check
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8095/healthz; then
+              echo
+              echo "SpeakTrain deployment test passed."
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs speaktrain-ci
+          exit 1
+
+      - name: Smoke test homepage
+        run: |
+          curl -fsS -L http://127.0.0.1:8095/login >/dev/null
+
+      - name: Save Docker image
+        run: |
+          docker save speaktrain:${{ github.sha }} | gzip > speaktrain-docker-image.tar.gz
+          ls -lh speaktrain-docker-image.tar.gz
+
+      - name: Upload deployable image
+        uses: actions/upload-artifact@v4
+        with:
+          name: speaktrain-docker-${{ github.sha }}
+          path: speaktrain-docker-image.tar.gz
+          retention-days: 14

@@ -1,8 +1,8 @@
 # SpeakTrain
 
 [![CI](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/ci.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/ci.yml)
-[![Playwright Demo](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/screenshots.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/screenshots.yml)
-[![CD](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/docker-publish.yml)
+[![Playwright Demo](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/playwright.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/playwright.yml)
+[![CD](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/cd.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/cd.yml)
 [![CodeQL](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/codeql.yml/badge.svg)](https://github.com/iamrichmack111/SpeakTrain/actions/workflows/codeql.yml)
 [![Docker](https://img.shields.io/badge/GHCR-v0.6.0-59e391?logo=docker&logoColor=white)](https://github.com/iamrichmack111/SpeakTrain/pkgs/container/speaktrain)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-f4c95d?logo=python&logoColor=white)](https://www.python.org/)

@@ -11,6 +11,6 @@
     "demo:video": "playwright test tests/e2e/demo.spec.js"
   },
   "devDependencies": {
-    "@playwright/test": "1.62.1"
+    "@playwright/test": "1.63.0"
   }
 }
